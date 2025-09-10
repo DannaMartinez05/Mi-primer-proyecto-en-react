@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto de React - Clases
 
-## Getting Started
+Este repositorio contiene los ejercicios realizados en las primeras clases de React.
 
-First, run the development server:
+## 📌 Clase 1
+En la primera clase se trabajó con **botones simples**:
+- Un botón **Aceptar**, que al hacer click muestra el mensaje: *"Gracias por aceptar"*.
+- Un botón **Cancelar**, que al hacer click muestra el mensaje: *"Gracias por cancelar"*.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Clase 2 (20 de agosto)
+En la segunda clase se realizaron dos ejercicios principales:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Vista Effect**  
+   - Cuando escribes tu nombre en un input, el texto en pantalla se actualiza en tiempo real con lo que escribes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Vista Nueva - Contador**  
+   - Un botón para **aumentar** el conteo.  
+   - Un botón para **disminuir** el conteo.  
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 📌 Clase 3 (03 de septiembre) de renderizado
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## RENDERIZADO CONDICIONAL
+->Ternarios
+-> if- else
 
-## Deploy on Vercel
+--> condicion a cumplir  se escribe 
+--> condicion ? "si es verdadero" : "si es falso"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+--> ? es if y el : es else
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+{
+    productos.length >0
+    ? <p>Hay productos disponibles</p>
+        : <p>No hay productos disponibles</p>
+
+}
+
+##  CONECCIÓN CON LA API 
+    // useEffect para consumir la API
+    useEffect(() => {
+        fetch('----')
+            .then(res => res.json())
+            .then(data => {
+                setProductos(data);
+                setCargando(false);
+            });
+            
+
